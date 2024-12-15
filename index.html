@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Time</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Hisslərin Pıçıltısı</h1>
+        <h2><i>"Ürəkdən gələn pıçıltı..."</i></h2>
+    </header>
+    <main>
+        <div class="Hekayə">
+            <h2>Xoşbəxtlik</h2>
+            <div class="paragraph-box">
+                <p class="short">
+                    Həyat bəzən insanı o qədər yorar ki, xoşbəxtliyin varlığını belə unudarsan. Elə bil bu hiss heç sənə aid olmayıb...
+                </p>
+                <p class="full" style="display: none;">
+                    Həyat bəzən insanı o qədər yorar ki, xoşbəxtliyin varlığını belə unudarsan. Elə bil bu hiss heç sənə aid olmayıb. Gözlərini yumub xatırlamağa çalışarsan: bir zamanlar üzünü isidən bir təbəssüm, içini titrədən bir həyəcan... Amma nə qədər çalışsan da, beynində bu hisslərin izini tapa bilməzsən. Xoşbəxtlik, sonsuz bir dənizin ortasında itmiş bir ada kimidir; var olduğunu bilirsən, amma ona çatmaq mümkün deyil.
+                    Hər şey ağır gəlir o anlarda. Günəşin doğuşu, bir quşun cəh-cəhi, küləyin dərinə toxunuşu... Əvvəllər sənə rahatlıq verən kiçik şeylər belə mənasızlaşır. Elə bil dünyanın bütün rəngləri silinib, geridə yalnız boz bir duman qalıb. Bu dumanın içindəykən, digər insanlar sənə xəyal kimi görünür...
+                </p>
+                <button class="read-more-btn">Davamı</button>
+                <h5>Yazar:</h5>
+            </div>
+        </div>
+        <div class="Hekayə">
+            <h2>Xoşbəxtlik</h2>
+            <div class="paragraph-box">
+                <p class="short">
+                    Həyat bəzən insanı o qədər yorar ki, xoşbəxtliyin varlığını belə unudarsan. Elə bil bu hiss heç sənə aid olmayıb...
+                </p>
+                <p class="full" style="display: none;">
+                    Həyat bəzən insanı o qədər yorar ki, xoşbəxtliyin varlığını belə unudarsan. Elə bil bu hiss heç sənə aid olmayıb. Gözlərini yumub xatırlamağa çalışarsan: bir zamanlar üzünü isidən bir təbəssüm, içini titrədən bir həyəcan... Amma nə qədər çalışsan da, beynində bu hisslərin izini tapa bilməzsən. Xoşbəxtlik, sonsuz bir dənizin ortasında itmiş bir ada kimidir; var olduğunu bilirsən, amma ona çatmaq mümkün deyil.
+                    Hər şey ağır gəlir o anlarda. Günəşin doğuşu, bir quşun cəh-cəhi, küləyin dərinə toxunuşu... Əvvəllər sənə rahatlıq verən kiçik şeylər belə mənasızlaşır. Elə bil dünyanın bütün rəngləri silinib, geridə yalnız boz bir duman qalıb. Bu dumanın içindəykən, digər insanlar sənə xəyal kimi görünür...
+                </p>
+                <button class="read-more-btn">Davamı</button>
+                <h5>Yazar:</h5>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Story Time. All rights reserved.</p>
+    </footer>
+</div>
+<script>
+    document.querySelectorAll('.read-more-btn').forEach((button) => {
+        button.addEventListener('click', () => {
+            const parent = button.closest('.paragraph-box');
+            const shortText = parent.querySelector('.short');
+            const fullText = parent.querySelector('.full');
+
+            // Toggle between showing short and full text
+            if (fullText.style.display === 'none') {
+                fullText.style.display = 'block';
+                shortText.style.display = 'none';
+                button.textContent = 'Gizle';
+            } else {
+                fullText.style.display = 'none';
+                shortText.style.display = 'block';
+                button.textContent = 'Davamı';
+            }
+        });
+    });
+</script>
+</body>
+</html>
